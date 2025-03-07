@@ -1,0 +1,213 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.description {
+  margin-top: 1rem;
+}
+
+.description,
+.technology {
+  font-size: 18px;
+  text-align: center;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  width: fit-content;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 32px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+/* Remove arrows from inputs */
+
+.no-arrows::-webkit-outer-spin-button,
+.no-arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-arrows {
+  -moz-appearance: textfield;
+}
+
+/* ========================= */
+
+/* Info about currency */
+
+.currency-equal {
+  text-align: left;
+}
+
+.big-currency {
+  font-size: 2rem;
+}
+
+/* Inputs */
+
+.selectors-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.selector {
+  padding: 4px;
+  box-sizing: border-box;
+  border: 1px solid #dadce0;
+  overflow: hidden;
+  display: flex;
+  border-radius: 6px;
+}
+
+.selector:has(input:focus) {
+  border: 1px solid #e52e71;
+}
+
+.selector:hover {
+  border: 1px solid #202124;
+}
+
+.select-currency1,
+.select-currency2 {
+  height: 100%;
+  border: none;
+}
+
+.currency-input1,
+.currency-input2 {
+  text-align: left;
+  line-height: 24px;
+  padding: 1px 6px 1px 12px;
+  font-size: 16px;
+  border: none;
+  height: 40px;
+  width: 150px;
+  border-radius: 6px;
+}
+
+.currency-input1:focus,
+.currency-input2:focus {
+  outline: none;
+}
+
+.select-currency1:focus,
+.select-currency2:focus {
+  outline: none;
+}
+
+/* Inputs End */
