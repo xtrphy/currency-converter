@@ -1,1 +1,3 @@
-# Very accurate and next gen converter
+# Very accurate Google like next gen converter
+
+Converter uses ExchangeRate API, inspired by Google currency converter
